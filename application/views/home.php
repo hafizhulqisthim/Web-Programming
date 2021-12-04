@@ -60,7 +60,7 @@
                 </div>
                 <div class="text-center">
                     <!--<?php print_r($applikasi); ?>-->
-                    <table class="table">
+                    <!--<table class="table">
                         <tr>
                             <th>NO</th>
                             <th>NAMA</th>
@@ -78,7 +78,7 @@
                              <td><?php echo $app['image'] ?></td>
                         </tr>
                         <?php } ?>
-                    </table>
+                    </table>-->
                 </div>  
                 <div class="text-center">
                     <h6 class="page-section-heading text-secondary mb-0 d-inline-block"><a href="<?= base_url('moreapps'); ?>">see more</a></h6>
