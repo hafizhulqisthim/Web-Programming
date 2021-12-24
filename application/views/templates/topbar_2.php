@@ -1,32 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <title><?php echo $judul ?></title>
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" crossorigin="anonymous"></script>
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="assets/dist/css/styles.css" rel="stylesheet">
-                
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Fonts CSS-->
-        <link rel="stylesheet" href="css/heading.css">
-        <link rel="stylesheet" href="css/body.css">
-    </head>
-    <body id="page-top">
-        <nav class="navbar navbar-expand-lg bg-secondary fixed-top" id="mainNav">
-            <div class="container"><a class="navbar-brand js-scroll-trigger" href="http://localhost/unlist3/home">UNLIST3</a>
-                <button class="navbar-toggler navbar-toggler-right font-weight-bold bg-dark text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">Menu <i class="fas fa-bars"></i></button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="http://localhost/unlist3/profile">PROFILE</a>
-                        </li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="<?= base_url('autentifikasi/logout'); ?>" data-toggle="modal" data-target="#logoutModal">LOGOUT</a>
-                        </li>                                                           
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title><?php echo $judul?></title>
+  </head>
+  <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" aria-current="page" href="<?= base_url('home'); ?>">Unlist3</a>
+    <a class="navbar-brand" aria-current="page" href="<?= base_url('Profile_Adm'); ?>">Profile_adm</a>
+    <a class="navbar-brand" aria-current="page" href="<?= base_url('Feedback_Adm'); ?>">Feedback</a>
+    <a class="navbar-brand" aria-current="page" href="<?= base_url('MoreApps_Adm'); ?>">More Apps</a>
+    <a class="navbar-brand" aria-current="page" href="<?= base_url('Member_Adm'); ?>">Member</a>
+    <!--<a class="navbar-brand" aria-current="page" href="<?= base_url('/'); ?>">Logout</a>-->
+    
+    <form class="d-flex">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="find">
+      <button class="btn btn-outline-success" type="submit">Search</button>
+    </form>
+    
+    <!--<form>
+      <input type="text" name="find">
+      <button type="submit">Cari</button>
+    </form>-->
+
+    <!--<div class="navbar-form navbar-right">
+      <?php echo form_open('moreapps/search') ?>
+      <input type="text" name="keyword" class="form-control" placeholder="Search">
+      <button type="submit" class="btn btn-success">Cari</button>
+      <?php echo form_close() ?>
+    </div>-->
+    
+
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
+  
+  </div>
+</nav>
+<br>

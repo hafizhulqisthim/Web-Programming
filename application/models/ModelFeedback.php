@@ -42,5 +42,15 @@ class ModelFeedback extends CI_Model
         $query=$this->db->get("feedback");  
         return $query->result_array();  
     }
+
+    public function total_feedback($field, $where)
+    {
+        $this->db->select_sum($field);
+        if(!empty($where) && count($where) > 0){
+            $this->db->where($where);
+        }
+        $this->db->from('feedback');
+        return $this->db->get()->row($field);
+    }
 }
 ?>

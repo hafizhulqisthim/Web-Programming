@@ -31,48 +31,6 @@
                     </div>
                 </div>
             </div>
-
-            <div class="text-center">
-                <h2 class="section-heading text-uppercase">  </h2>
-                <h3 class="section-subheading text-muted">
-                    Your feedback history:
-                </h3>
-            </div>
-            <br><br>
-
-
-            <div class="container">
-                <table class="table">
-                    <tr>
-                        <th>NR</th>
-                        <th>NAME</th>
-                        <th>EMAIL</th>
-                        <th>COMMENT</th>
-                        <th>ACTION</th>
-                    </tr>
-                    <!--<?php print_r($feed_back); ?>-->
-                    <?php 
-                    $nr=1;
-                    foreach ($feed_back as $fdb) {
-                    ?>
-                    <tr>
-                        <td><?php echo $nr++ ?> </td>
-                        <td><?php echo $fdb['name']; ?> </td>
-                        <td><?php echo $fdb['email']; ?> </td>
-                        <td><?php echo $fdb['comment']; ?> </td>   
-                        <td>
-                        <a href="<?php echo base_url('home/edit/').$fdb['id']; ?>" class="btn btn-success btn-sm">Update</a>
-                        <a href="<?php echo base_url('home/delete/').$fdb['id']; ?>" class="btn btn-danger btn-sm" onclick = "javascript : return confirm('Are you sure to delete this data?')">Delete</a>
-                        </td>   
-                    </tr>
-                    <?php } ?>
-                </table>
-            </div>
-
         </div>
-        <!-- /.container-fluid -->
-
     </div>
-    <!-- End of Main Content -->
-
 </div>

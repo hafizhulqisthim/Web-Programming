@@ -31,7 +31,7 @@ Class Profile extends CI_Controller
 
 
         if ($this->form_validation->run() == false) {
-            $this->load->view('templates/topbar_lain', $data);
+            $this->load->view('templates/topbar_2', $data);
             $this->load->view('user/ubah-profile', $data);
         } else {
             $nama = $this->input->post('nama', true);
@@ -66,7 +66,7 @@ Class Profile extends CI_Controller
             $this->db->update('user');
 
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-message" role="alert">Profil Berhasil diubah </div>');
-            redirect('profile');
+            redirect('profile_adm');
         }
     }
 }

@@ -14,28 +14,12 @@
 
         <div class="container-fluid">
 
-           <div class="card mb-3" style="max-width: 540px;">
-                <div class="row no-gutters">
-                    <div class="col-md-4">
-                        <img src="<?= base_url('assets/img/profile/') . $user['image']; ?>" class="card-img" alt="...">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $user['nama']; ?></h5>
-                            <p class="card-text"><?= $user['email']; ?></p>
-                            <p class="card-text"><small class="text-muted">Become a member since: <br><b><?= date('d F Y', $user['tanggal_input']); ?></b></small></p>
-                        </div>
-                        <div class="btn btn-info ml-3 my-3">
-                            <a href="<?= base_url('profile/ubahProfil'); ?>" class="text text-white"><i class="fas fa-user-edit"></i> Change Profile</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           
 
             <div class="text-center">
                 <h2 class="section-heading text-uppercase">  </h2>
                 <h3 class="section-subheading text-muted">
-                    Your feedback history:
+                    feedback history from users:
                 </h3>
             </div>
             <br><br>

@@ -81,7 +81,7 @@
                     </table>-->
                 </div>  
                 <div class="text-center">
-                    <h6 class="page-section-heading text-secondary mb-0 d-inline-block"><a href="<?= base_url('moreapps'); ?>">see more</a></h6>
+                    <h6 class="page-section-heading text-secondary mb-0 d-inline-block"><a href="<?= base_url('moreapps_adm'); ?>">see more</a></h6>
                 </div>                
             </div>
 
@@ -369,7 +369,7 @@
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">  </h2>
                     <h3 class="section-subheading text-muted">
-                        Check your feedback on <a href="http://localhost/unlist3/profile">profile</a>
+                        Check your feedback on <a href="<?= base_url('profile_adm'); ?>">profile</a>
                     </h3>
                 </div>
                 <br><br>

@@ -1,7 +1,7 @@
 <?php 
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Home extends CI_Controller
+class Feedback_Adm extends CI_Controller
 {
 	public function __construct()
     {
@@ -11,22 +11,19 @@ class Home extends CI_Controller
 
 	public function index()
 	{
-		$data['judul'] = 'Unlist3';
-		$data['slogan1'] = 'EACH UNAVAILABLE WAS HERE!';
-		$data['slogan2'] = 'Take into yours';
-		$data['footer_quotes'] = '“Understanding is the bridge between two minds; love is the bridge between two souls.”';
+		$data['judul'] = 'Home_Adm';
+		$data['feed_back'] = $this->ModelFeedback->getSearch();
+		$data['administrator'] = $this->ModelAdm->cekData(['email_adm' => $this->session->userdata('email_adm')])->row_array();
 
-		$data['applikasi'] = $this->ModelAplikasi->get_aplikasi();
-		$data['feed_back'] = $this->ModelFeedback->get_feedback();
-		$data['user'] = $this->ModelUser->cekData(['email' => $this->session->userdata('email')])->row_array();
-		//$data['anggota'] = $this->ModelUser->getUserLimit()->result_array();
+		$this->load->view('templates/topbar_2', $data);
+		$this->load->view('templates_adm/header', $data);
+		$this->load->view('templates_adm/index_adm', $data);
+        //$this->load->view('templates_adm/sidebar', $data);
+		$this->load->view('prof_adm/feedback_adm_view', $data);
+
         
+		//$this->load->view('user/index', $data);
 
-
-		$this->load->view('templates/topbar', $data);
-		$this->load->view('templates/header', $data);
-		$this->load->view('home', $data);
-		$this->load->view('templates/footer', $data);
 	}
 
 	public function input_feedback()
@@ -78,5 +75,6 @@ class Home extends CI_Controller
 		$this->ModelFeedback->delete_data($where,'feedback');
 		redirect('home');
 	}
+
 }
 ?>

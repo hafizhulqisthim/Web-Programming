@@ -13,10 +13,10 @@
                         <div class="col-lg">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Login Page</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Login Adm Page</h1>
                                 </div>
                                 <?= $this->session->flashdata('pesan'); ?>
-                                <form class="user" method="post" action="<?= base_url('autentifikasi'); ?>">
+                                <form class="user" method="post" action="<?= base_url('autentifikasi/logasadm'); ?>">
                                     <div class="form-group">
                                         <input type="text" class="form-control form-control-user" value="<?= set_value('email'); ?>" id="email" placeholder="Enter Email Address" name="email">
                                         <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
@@ -30,10 +30,9 @@
                                     </button>
                                 </form>
                                 <hr>
-                                <div class="text-center">
-                                    <a class="small" href="<?= base_url('autentifikasi/registrasi'); ?>">Register</a>
-                                    <br>
-                                    <!--<a class="small" href="<?= base_url('autentifikasi_adm'); ?>">Login as Administrator</a>-->
+                                <div class="text-center">                                    
+                                     
+                                     <a class="small" href="<?= base_url('autentifikasi'); ?>">Back to User Login Page</a>
                                 </div>
                             </div>
                         </div>

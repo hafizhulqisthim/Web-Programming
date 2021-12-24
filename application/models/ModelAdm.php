@@ -1,21 +1,21 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class ModelUser extends CI_Model
+class ModelAdm extends CI_Model
 {
     public function simpanData($data = null)
     {
-        $this->db->insert('user', $data);
+        $this->db->insert('administrator', $data);
     }
 
     public function cekData($where = null)
     {
-        return $this->db->get_where('user', $where);
+        return $this->db->get_where('administrator', $where);
     }
 
     public function getUserWhere($where = null)
     {
-        return $this->db->get_where('user', $where);
+        return $this->db->get_where('administrator', $where);
     }
 
     public function cekUserAccess($where = null)
@@ -29,7 +29,7 @@ class ModelUser extends CI_Model
     public function getUserLimit()
     {
         $this->db->select('*');
-        $this->db->from('user');
+        $this->db->from('administrator');
         $this->db->limit(10, 0);
         return $this->db->get();
     }
@@ -40,17 +40,8 @@ class ModelUser extends CI_Model
         if(!empty($where) && count($where) > 0){
             $this->db->where($where);
         }
-        $this->db->from('user');
+        $this->db->from('administrator');
         return $this->db->get()->row($field);
     }
 
-    public function getUserSearch()
-    {
-        $filter = $this->input->get('find');
-        $this->db->like('nama',$filter);
-        $this->db->or_like('email', $filter);
-        $this->db->or_like('image', $filter);
-        $query=$this->db->get("user");  
-        return $query->result_array();  
-    }
 }
